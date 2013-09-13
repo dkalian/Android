@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Строки главного меню -->
+    
+    <string name="app_name">Phone Market</string>
+    <string name="btn_preferences">Настройки</string>
+    <string name="btn_sell_phone">Продать</string>
+    <string name="btn_buy_phone">Искать</string>
+    <string name="btn_exit">Выход</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_dash_board_">DashBoard_Activity</string>
+
+    <!-- Строки меню продажи телефона -->
+    
+    <string name="title_activity_sell_phone">Продажа</string>
+    <string name="menu_sell_phone_spinner_mobile_info">Описание телефона</string>
+    <string name="menu_sell_phone_spinner_mobile_info_brand">Полное название*</string>
+    <string name="menu_sell_phone_spinner_mobile_info_model">Модель*</string>
+    <string name="menu_sell_phone_spinner_mobile_info_more_info">Подробное описание</string>
+    <string name="menu_sell_phone_spinner_mobile_info_price">Цена $*</string>
+    <string name="menu_sell_phone_spinner_contact_info">Контактные данные</string>
+    <string name="menu_sell_phone_spinner_contact_info_name">Ваше имя</string>
+    <string name="menu_sell_phone_spinner_contact_info_region">Область</string>
+    <string name="menu_sell_phone_spinner_contact_info_phone_number">Номер телефона</string>
+    <string name="menu_sell_phone_spinner_contact_info_other_phone_number">Доп. номер телефона</string>
+    <string name="menu_sell_phone_spinner_contact_info_e_mail">Эл. почта</string>
+    <string name="menu_sell_phone_button_send">Отправить</string>
+    
+    <!-- Строки меню покупки телефона -->
+    
+    <string name="title_activity_search__phone_">Поиск</string>
+    <string name="menu_buy_phone_spinner_mobile_info">Описание телефона</string>
+    <string name="menu_buy_phone_spinner_mobile_brand_hint">Полное название*</string>
+    <string name="menu_buy_phone_spinner_mobile_model_hint">Модель*</string>
+    <string name="menu_buy_phone_spinner_mobile_price_hint">Цена $* (до)</string>
+    <string name="menu_buy_phone_spinner_other_info">Другое</string>
+    <string name="menu_buy_phone_spinner_other_info_region">Область</string>
+    <string name="menu_buy_phone_spinner_button_search">Search</string>
+
+    <!-- Строки результатов -->
+
+    <string name="title_activity_results_search">Результаты поиска</string>
+    <string name="menu_results_search_small_text_hint_region">Обл.: </string>
+    <string name="menu_results_search_small_text_hint_state">Сост.: </string>
+    <string name="menu_results_search_small_text_hint_price">Цена: </string>
+    <string name="menu_results_search_small_text_hint_brand_and_model">Brand and model</string>
+
+    <!-- Строки экрана дополнительной информации -->
+
+    <string name="title_activity_more_info">Краткая информация</string>
+    <string name="more_info_brand">Название</string>
+    <string name="more_info_color">Цвет: </string>
+    <string name="more_info_price">Цена: </string>
+    <string name="more_info_state">Сост.: </string>
+    <string name="more_info_more_info">Подробно: </string>
+    <string name="more_info_contscts">Контактная информация</string>
+    <string name="more_info_name">Имя владельца: </string>
+    <string name="more_info_phone_mumber">Номер телефона: </string>
+    <string name="more_info_region">Область: </string>
+    <string name="more_info_other_phone_number">Доп. номер телефона: </string>
+    <string name="more_info_other_e_mail">Эл. почта: </string>
+    <string name="hello_world">Hello world!</string>
+    
+    
+    <string name="title_activity_call_information">Контактная информация</string>
+    <string name="title_activity_about_phone_propities">О телефоне</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Автозапуск" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/images_rotate_left"
+            android:key="autostart"
+            android:summary="Автозагрузка службы обновлений"
+            android:title="Автозапуск" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Обновление данных" >
+        <ListPreference
+            android:entries="@array/UpdateTimeString"
+            android:entryValues="@array/UpdateTimeValues"
+            android:key="TimeUpdate"
+            android:title="Интервал обновления" android:defaultValue="30"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

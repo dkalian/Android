@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DefaultLocale">
+        <ignore path="src\com\android\phone_market\model\DataBaseOperations\ResultsInterpreter.java" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res\layout\activity_more_info.xml" />
+    </issue>
+</lint>

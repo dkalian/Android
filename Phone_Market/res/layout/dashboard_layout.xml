@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_1"
+    android:orientation="vertical" >
+
+    <com.android.phone_market.model.Dashboard.Dashboard
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/home_btn_buy_phone"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/btn_buy_phone"
+            android:text="@string/btn_buy_phone" />
+
+        <Button
+            android:id="@+id/home_btn_sell_phone"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/btn_sell_phone"
+            android:text="@string/btn_sell_phone" />
+
+        <Button
+            android:id="@+id/home_btn_preferences"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/btn_sell_preferences"
+            android:text="@string/btn_preferences" />
+
+        <Button
+            android:id="@+id/home_btn_exit"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/btn_exit"
+            android:text="@string/btn_exit" />
+    </com.android.phone_market.model.Dashboard.Dashboard>
+
+</LinearLayout>

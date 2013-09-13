@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.phone_market.controller"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock.Light.DarkActionBar" >
+        <activity
+            android:name="AboutPhonePropitiesActivity"
+            android:theme="@style/Sherlock.__Theme.Dialog"
+            android:windowSoftInputMode="stateHidden" android:label="@string/title_activity_about_phone_propities">
+        </activity>
+        <activity
+            android:name="CallInformationActivity"
+            android:theme="@style/Sherlock.__Theme.Dialog"
+            android:windowSoftInputMode="stateHidden" android:label="@string/title_activity_call_information">
+        </activity>
+        <activity
+            android:name="DashboardLayoutActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="MoreInfoActivity"
+            android:windowSoftInputMode="stateHidden" android:label="@string/title_activity_about_phone_propities">
+        </activity>
+        <activity
+            android:name="ResultsSearchActivity"
+            android:label="@string/title_activity_results_search"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="SearchPhoneActivity"
+            android:label="@string/title_activity_search__phone_"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="SellPhoneActivity"
+            android:label="@string/title_activity_sell_phone"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="Preference"
+            android:windowSoftInputMode="stateHidden" android:label="@string/btn_preferences">
+        </activity>
+        <service android:name="com.android.phone_market.model.Service.BackgroungService"></service>
+        <receiver android:name="com.android.phone_market.model.AlarmManager.RepeatService">
+        </receiver>
+        <receiver android:name="com.android.phone_market.model.Service.ServiceAutostart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
