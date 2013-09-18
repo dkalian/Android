@@ -8,6 +8,11 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+/**
+ * 
+ * @author Nickolay Dubkov
+ * @version 0.0.1
+ */
 public class Track extends Activity {
 
 	@Override

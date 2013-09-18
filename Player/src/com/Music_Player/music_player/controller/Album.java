@@ -6,7 +6,11 @@ import android.view.Menu;
 
 import com.Music_Player.music_player.R;
 
-
+/**
+ * 
+ * @author Nickolay Dubkov
+ * @version 0.0.1
+ */
 public class Album extends Activity {
 
 	@Override

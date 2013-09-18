@@ -1,30 +1,23 @@
 package com.Music_Player.music_player.model.MusicExplorer;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+
+import com.Music_Player.music_player.model.DataBase.DBConstants;
+import com.Music_Player.music_player.model.DataBase.DataBaseOperations;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.util.Log;
 
-public class LibraryController {
+public class MusicExplorer {
 
-	private ArrayList<HashMap<String, Object>> all_tracks_info;
+	static HashMap<String, Object> track_information;
 
-	/**
-	 * 
-	 * @param context Context
-	 * @return information about all track <br>
-	 * all tracks info [HashMap<String, Object>]
-	 * 
-	 */
-	
-	public ArrayList<HashMap<String, Object>> getAllMusic(Context context) {
-
-		all_tracks_info = new ArrayList<HashMap<String, Object>>();
-
+	public static void UpdateTracksLibryary(Context context) {
+		track_information = new HashMap<String, Object>();
 		ContentResolver contentResolver = context.getContentResolver();
 		Uri uri = android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
 		Cursor cursor = contentResolver.query(uri, null, null, null, null);
@@ -33,8 +26,6 @@ public class LibraryController {
 		} else if (!cursor.moveToFirst()) {
 			// no media on the device
 		} else {
-			int idColumn = cursor
-					.getColumnIndex(android.provider.MediaStore.Audio.Media._ID);
 			int titleColumn = cursor
 					.getColumnIndex(android.provider.MediaStore.Audio.Media.TITLE);
 			int titleAlbum = cursor
@@ -44,30 +35,38 @@ public class LibraryController {
 			int titleData = cursor
 					.getColumnIndex(android.provider.MediaStore.Audio.Media.DATA);
 
-			// 1 - if music
+			// 1 - music, 0 - alarm/notif...
 			int is_music_flag = cursor
 					.getColumnIndex(MediaStore.Audio.Media.IS_MUSIC);
-
 			do {
-				HashMap<String, Object> track_info = new HashMap<String, Object>();
-
-				//long Id = cursor.getLong(idColumn);
+				Long is_music = cursor.getLong(is_music_flag);
 				String Title = cursor.getString(titleColumn);
 				String Album = cursor.getString(titleAlbum);
 				String Artist = cursor.getString(titleArtist);
 				String Data = cursor.getString(titleData);
-
-				track_info.put(Constant.HASH_MAP_KEY_TRACK_PATH, Data);
-				track_info.put(Constant.HASH_MAP_KEY_TRACK_TITLE, Title);
-				track_info.put(Constant.HASH_MAP_KEY_ALBUM_TITLE, Album);
-				track_info.put(Constant.HASH_MAP_KEY_ARTIST_TITLE, Artist);
-
-				if (is_music_flag == 1) {
-					all_tracks_info.add(track_info);
+				track_information.put(DBConstants.HASH_MAP_KEY_TRACK_TITLE,
+						Title);
+				track_information.put(DBConstants.HASH_MAP_KEY_ALBUM_TITLE,
+						Album);
+				track_information.put(DBConstants.HASH_MAP_KEY_ARTIST_TITLE,
+						Artist);
+				track_information
+						.put(DBConstants.HASH_MAP_KEY_TRACK_PATH, Data);
+				/*Log.d("Libriary", "Track info:");
+				Log.d("Libriary", "Title: " + Title);
+				Log.d("Libriary", "Album: " + Album);
+				Log.d("Libriary", "Artist: " + Artist);
+				Log.d("Libriary", "Data: " + Data);
+				Log.d("Libriary", "____________________");
+				
+				/*
+				 * 0 - ID 1 - Data 2 - Title 3 - Album 4 - Artist 5 - Length
+				 */
+				if (is_music == 1) {
+					DataBaseOperations.AddTrackToDB(context, track_information);
 				}
 			} while ((cursor.moveToNext()));
 		}
 
-		return all_tracks_info;
 	}
 }
