@@ -57,4 +57,5 @@ public class DAO extends SQLiteOpenHelper {
 				+ "id integer primary key autoincrement, title text, album text, artist text, path text);");
 	}
 
+
 }

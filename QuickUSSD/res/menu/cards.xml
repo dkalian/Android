@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sabd="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/add_card"
+        android:icon="@drawable/content_new_event"
+        android:title="@string/action_bar_add_card"
+        android:visible="true"
+        sabd:showAsAction="always"/>
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/action_settings"
+        android:title="@string/action_bar_settings"
+        android:visible="true"
+        sabd:showAsAction="always"/>
+
+</menu>

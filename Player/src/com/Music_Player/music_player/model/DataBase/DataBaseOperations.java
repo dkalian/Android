@@ -1,5 +1,6 @@
 package com.Music_Player.music_player.model.DataBase;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.ContentValues;
@@ -14,7 +15,9 @@ public class DataBaseOperations {
 		DAO dao = new DAO(context);
 		SQLiteDatabase db = dao.getWritableDatabase();
 		ContentValues cv = new ContentValues();
-		cv.put(DBConstants.TABLE_TRACKS_NAME_FIELD_TITLE,(String) track_information.get(DBConstants.HASH_MAP_KEY_TRACK_TITLE));
+		cv.put(DBConstants.TABLE_TRACKS_NAME_FIELD_TITLE,
+				(String) track_information
+						.get(DBConstants.HASH_MAP_KEY_TRACK_TITLE));
 		cv.put(DBConstants.TABLE_TRACKS_NAME_FIELD_ARTIST,
 				(String) track_information
 						.get(DBConstants.HASH_MAP_KEY_ARTIST_TITLE));
@@ -61,5 +64,31 @@ public class DataBaseOperations {
 			// No data
 		}
 		db.close();
+	}
+
+	public static ArrayList<HashMap<String, Object>> GetAllAlbums(Context context) {
+		ArrayList<HashMap<String, Object>> albums = new ArrayList<HashMap<String, Object>>();
+		DAO dao = new DAO(context);
+		SQLiteDatabase db = dao.getWritableDatabase();
+		
+		String[] columns = { DBConstants.TABLE_TRACKS_NAME_FIELD_ALBUM }; // выборка
+																			// только												// альбомов
+		Cursor cursor = db.query(true, DBConstants.TABLE_TRACKS_NAME, columns,
+				null, null, null, null, null, null); // выборка без дублирования
+		if (cursor.moveToFirst()) {
+			do {
+				HashMap<String, Object> temp = new HashMap<String, Object>();
+				int fAlbum = cursor
+						.getColumnIndex(DBConstants.TABLE_TRACKS_NAME_FIELD_ALBUM);
+				
+				String Album = cursor.getString(fAlbum);
+				temp.put(DBConstants.HASH_MAP_KEY_ALBUM_TITLE, Album);
+				albums.add(temp);
+			} while (cursor.moveToNext());
+		} else {
+			// No data
+		}
+		db.close();
+		return albums;
 	}
 }

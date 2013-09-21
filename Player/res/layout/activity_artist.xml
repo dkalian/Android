@@ -12,17 +12,16 @@
 
     <TextView
         android:id="@+id/activity_artist_artist_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Artist"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1" >
 
- 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
@@ -72,28 +71,22 @@
             android:layout_toRightOf="@+id/imageView3"
             android:scaleType="centerCrop"
             android:src="@drawable/folder" />
-
     </RelativeLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:text="Альбомы"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <ListView
+        android:id="@+id/activity_artist_album_list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" >
-
-        <ListView
-            android:id="@+id/activity_artist_album_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:footerDividersEnabled="true" >
-        </ListView>
-    </ScrollView>
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:footerDividersEnabled="true" >
+    </ListView>
 
 </LinearLayout>

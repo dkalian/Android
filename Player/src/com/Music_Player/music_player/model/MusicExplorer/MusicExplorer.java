@@ -2,15 +2,14 @@ package com.Music_Player.music_player.model.MusicExplorer;
 
 import java.util.HashMap;
 
-import com.Music_Player.music_player.model.DataBase.DBConstants;
-import com.Music_Player.music_player.model.DataBase.DataBaseOperations;
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.MediaStore;
-import android.util.Log;
+
+import com.Music_Player.music_player.model.DataBase.DBConstants;
+import com.Music_Player.music_player.model.DataBase.DataBaseOperations;
 
 public class MusicExplorer {
 
@@ -58,7 +57,6 @@ public class MusicExplorer {
 				Log.d("Libriary", "Artist: " + Artist);
 				Log.d("Libriary", "Data: " + Data);
 				Log.d("Libriary", "____________________");
-				
 				/*
 				 * 0 - ID 1 - Data 2 - Title 3 - Album 4 - Artist 5 - Length
 				 */

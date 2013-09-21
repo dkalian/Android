@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/dialog_add_card_account_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dialog_add_card_keeper_text"
+        android:layout_below="@+id/dialog_add_card_keeper_text"
+        android:ems="10"
+        android:hint="Номер карты *ХХХХ"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/dialog_add_card_actual_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dialog_add_card_account_number"
+        android:layout_below="@+id/dialog_add_card_account_number"
+        android:ems="10"
+        android:hint="Действительна до"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/dialog_add_card_button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dialog_add_card_button_save"
+        android:layout_alignBottom="@+id/dialog_add_card_button_save"
+        android:layout_alignRight="@+id/dialog_add_card_actual_date_text"
+        android:background="@null"
+        android:drawableTop="@drawable/navigation_cancel"
+        android:text="Отмена" />
+
+    <Spinner
+        android:id="@+id/dialog_add_card_spinner_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dialog_add_card_keeper_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/dialog_add_card_keeper_text" />
+
+    <EditText
+        android:id="@+id/dialog_add_card_keeper_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_add_card_spinner_bank"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Владелец"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/dialog_add_card_about_card_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dialog_add_card_actual_date_text"
+        android:layout_below="@+id/dialog_add_card_actual_date_text"
+        android:ems="10"
+        android:hint="Краткое описание" />
+
+    <Button
+        android:id="@+id/dialog_add_card_button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dialog_add_card_about_card_text"
+        android:layout_below="@+id/dialog_add_card_about_card_text"
+        android:background="@null"
+        android:drawableTop="@drawable/navigation_accept"
+        android:text="Сохранить" />
+
+</RelativeLayout>

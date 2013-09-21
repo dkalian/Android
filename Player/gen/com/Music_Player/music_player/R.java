@@ -22,27 +22,29 @@ public final class R {
     }
     public static final class drawable {
         public static final int collections_sort_by_size=0x7f020000;
-        public static final int cover=0x7f020001;
-        public static final int cover1=0x7f020002;
-        public static final int cover2=0x7f020003;
-        public static final int cover3=0x7f020004;
-        public static final int folder=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int ic_play=0x7f020007;
-        public static final int music=0x7f020008;
+        public static final int content_new=0x7f020001;
+        public static final int content_remove=0x7f020002;
+        public static final int cover=0x7f020003;
+        public static final int cover1=0x7f020004;
+        public static final int cover2=0x7f020005;
+        public static final int cover3=0x7f020006;
+        public static final int folder=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int ic_play=0x7f020009;
+        public static final int music=0x7f02000a;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080000;
         public static final int action_settings=0x7f08000c;
-        public static final int activity_artist_album_list=0x7f080009;
+        public static final int activity_artist_album_list=0x7f080008;
         public static final int activity_artist_artist_title=0x7f080001;
         public static final int imageView1=0x7f080003;
         public static final int imageView2=0x7f080004;
         public static final int imageView3=0x7f080005;
         public static final int imageView4=0x7f080006;
-        public static final int item_album_album_title_text=0x7f08000a;
-        public static final int item_album_button_play_album=0x7f08000b;
-        public static final int scrollView1=0x7f080008;
+        public static final int item_album_album_title_text=0x7f080009;
+        public static final int item_album_button_add_to_playlist=0x7f08000b;
+        public static final int item_album_button_play_album=0x7f08000a;
         public static final int textView1=0x7f080002;
         public static final int textView3=0x7f080007;
     }
